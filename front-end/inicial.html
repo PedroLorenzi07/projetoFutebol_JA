@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Futebol</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /*background-color: #f0f0f0;*/
+            background-color: rgba(200, 255, 50, 0.2);
+        }
+        .container {
+            text-align: center;
+            /*background-color: #ffffff;*/
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: black;
+        }
+        p {
+            color: black;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007219;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #00a31b;
+        }
+        .nomes{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de </br> Times e Estádios</h1>
+        <p>Sistema simples de cadastro e listagem de </br> <span class="nomes"> TIMES & ESTÁDIOS.</span></p>
+        <a href="telaTime/time.html" class="button">Cadastrar Time</a>
+        <a href="telaEstadio/estadio.html" class="button">Cadastrar Estádio</a>
+    </div>
+</body>
+</html>
