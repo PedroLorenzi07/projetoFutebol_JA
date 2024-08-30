@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Estádio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /*background-color: #f0f8ff;*/
+            Background-color: rgba(200, 255, 50, 0.2);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .box {
+            /*background-color: #ffffff;*/
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: black;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #aaa;
+            border-radius: 15px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        #salvar {
+            background-color: #28a745;
+        }
+
+        #editar {
+            background-color: #007bff;
+        }
+
+        #excluir {
+            background-color: #dc3545;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 15px;
+            background-color: #fff;
+            color: black;
+            font-size: 16px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 16px;
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .btnVoltar {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 110px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 15px;
+            text-decoration: none;
+            
+            
+        }
+        .btnVoltar:hover {
+            background-color: #a10000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btnVoltar:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <h1>Dados do Estádio</h1>
+        <label for="estadio_nome">Nome do Estádio:</label>
+        <input type="text" id="estadio_nome">
+
+        <label for="estadio_time_mandante">Time Mandante:</label>
+        <input type="text" id="estadio_time_mandante">
+
+        <label for="estadio_inauguracao">Ano de Inauguração:</label>
+        <input type="text" id="estadio_inauguracao">
+
+        <label for="estadio_pais">Localização - País:</label>
+        <input type="text" id="estadio_pais">
+
+        <label for="estadio_estado">Localização - Estado:</label>
+        <input type="text" id="estadio_estado">
+
+        <label for="estadio_cidade">Localização - Cidade:</label>
+        <input type="text" id="estadio_cidade">
+
+        <label for="estadio_capacidade">Capacidade Total:</label>
+        <input type="text" id="estadio_capacidade">
+
+        <label for="estadio_grama">Tipo de Grama:</label>
+        <select id="estadio_grama">
+            <option value="" disabled selected>Selecione</option>
+            <option value="Natural">Natural</option>
+            <option value="Sintetica">Sintética</option>
+            <option value="Mista">Mista</option>
+        </select>
+        <span id="erro_msg" style="color:red; display: none;">Opção inválida.</span>
+        <!--<input type="text" id="estadio_grama">-->
+
+        <button id="salvar">Salvar</button>
+        <button id="editar">Editar</button>
+        <button id="excluir">Excluir</button> </br></br></br>
+        <label for="estadio_selecionado">Edição/Exclusão | Selecione um estádio:</label>
+        <select id="estadio_selecionado">
+            <option value="" disabled selected>Selecione um estádio</option>
+        </select>
+        <a href="../inicial.html" class="btnVoltar">Voltar</a>
+    </div>
+
+    <script src="../telaEstadio/script.js"></script>
+
+</body>
+
+</html>
